@@ -5,6 +5,7 @@ import com.projects.airBnbApp.entity.Hotel;
 
 public interface HotelService {
     //Just checking weather git hub is working or not.
+    //Just trying to push.
     HotelDto createNewHotel(HotelDto hotelDto);
     HotelDto getHotelById(Long id);
 }
