@@ -8,6 +8,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,6 +23,7 @@ public class Hotel {
     @Column(nullable = false)
     private String name;
 
+    private String city;
 
     // This will store URL of images in the bottom field, and actual images will be stored else where in the server
     // We have mention the columnDefination as its smart enough guess what values will be store, this will not happen upper.
@@ -49,4 +51,7 @@ public class Hotel {
 
     @ManyToOne
     private User owner;
+
+    @OneToMany(mappedBy = "hotel")
+    private List<Room> rooms;
 }

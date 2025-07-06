@@ -47,4 +47,11 @@ public class HotelController {
         return ResponseEntity.noContent().build();
     }
 
+    //When ever we want to update few things in database we use pathMapping
+    @PatchMapping("/{hotelId}")
+    public ResponseEntity<Void> activateHotel(@PathVariable Long hotelId){
+
+        hotelService.activateHotel(hotelId);
+        return ResponseEntity.noContent().build();
+    }
 }
