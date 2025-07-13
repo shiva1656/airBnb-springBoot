@@ -48,7 +48,7 @@ public class HotelController {
     }
 
     //When ever we want to update few things in database we use pathMapping
-    @PatchMapping("/{hotelId}")
+    @PatchMapping("/{hotelId}/activate")
     public ResponseEntity<Void> activateHotel(@PathVariable Long hotelId){
 
         hotelService.activateHotel(hotelId);

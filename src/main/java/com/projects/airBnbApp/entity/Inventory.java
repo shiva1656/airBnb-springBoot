@@ -46,6 +46,10 @@ public class Inventory {
     @Column(nullable = false, columnDefinition = "INTEGER DEFAULT 0")
     private Integer bookedCount;
 
+    //This just indicates we are reserving the rooms while booking, and it goes back to its initial state.
+    @Column(nullable = false, columnDefinition = "INTEGER DEFAULT 0")
+    private Integer reservedCount;
+
     @Column(nullable = false)
     private Integer totalCount;
 

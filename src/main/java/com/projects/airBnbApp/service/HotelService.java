@@ -1,6 +1,7 @@
 package com.projects.airBnbApp.service;
 
 import com.projects.airBnbApp.dto.HotelDto;
+import com.projects.airBnbApp.dto.HotelInfoDto;
 
 public interface HotelService {
     //Just checking weather git hub is working or not.
@@ -14,4 +15,7 @@ public interface HotelService {
     void deleteHotelById(Long id);
 
     void activateHotel(Long hotelId);
+
+    HotelInfoDto getHotelInfoById(Long hotelId);
+
 }
