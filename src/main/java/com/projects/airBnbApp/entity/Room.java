@@ -1,6 +1,7 @@
 package com.projects.airBnbApp.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,6 +25,7 @@ public class Room {
     //Here it automatically hotel name or id will be kept by the backend and column name will be "hotel_id"
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="hotel_id",nullable = false)
+
     private Hotel hotel;
 
     @Column(nullable = false)
